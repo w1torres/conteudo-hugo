@@ -1,4 +1,4 @@
-baseURL = 'https://w1torres.github.io/concurso-builder/'
+baseURL = 'https://w1torres.github.io/concurso-hugo/'
 languageCode = 'pt-br'
 title = 'Estudo para Concursos'
 theme = 'hugo-book'
@@ -7,7 +7,7 @@ theme = 'hugo-book'
   # Configurações do tema Hugo Book
   BookToC = true
   BookSearch = true
-  BookRepo = "https://github.com/w1torres/concurso-builder"
+  BookRepo = "https://github.com/w1torres/concurso-hugo"
   customCSS = ["css/custom.css"]
 [menu]
   [[menu.before]]
