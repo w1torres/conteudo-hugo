@@ -7,14 +7,22 @@ import { buildPrompt } from './generator/promptBuilder.js';
 async function main() {
   console.log("🚀 Iniciando geração do material de estudo...");
 
+  // Carrega apenas o edital
   const edital = await fs.readJson('./edital/edital.json');
-  const biblio = await fs.readJson('./edital/bibliografia.json');
 
   await prepareDirectories(edital);
 
   for (const disc of edital.disciplinas) {
     for (const topico of disc.topicos) {
-      const fileName = `${topico.toLowerCase().replace(/ /g, '-')}.md`;
+      // Formata o nome do arquivo: remove espaços e caracteres especiais
+      const safeFileName = topico
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]/g, "-")
+        .replace(/-+/g, "-");
+
+      const fileName = `${safeFileName}.md`;
       const filePath = path.join(process.cwd(), 'content', disc.slug, fileName);
 
       if (await fs.pathExists(filePath)) {
@@ -24,7 +32,8 @@ async function main() {
 
       console.log(`📝 Gerando conteúdo para: ${topico}...`);
       
-      const prompt = buildPrompt(disc.nome, topico, biblio[disc.slug] || []);
+      // Chama o buildPrompt apenas com disciplina e tópico
+      const prompt = buildPrompt(disc.nome, topico);
       const content = await generateAIContent(prompt);
 
       const frontmatter = `---
@@ -36,10 +45,6 @@ draft: false
 {{< toc >}}
 
 ${content}
-
----
-### Bibliografia Sugerida
-${(biblio[disc.slug] || []).map(b => `- ${b}`).join('\n')}
 `;
 
       await fs.writeFile(filePath, frontmatter);
@@ -48,4 +53,7 @@ ${(biblio[disc.slug] || []).map(b => `- ${b}`).join('\n')}
   console.log("✅ Processo concluído!");
 }
 
-main();
+main().catch(err => {
+  console.error("❌ Erro fatal na execução:", err);
+  process.exit(1);
+});
