@@ -1,0 +1,42 @@
+<!-- No seu arquivo de layout (ex: layouts/index.html) -->
+<div class="disciplinas-container">
+  <h2>Disciplinas</h2>
+  
+  {{ range .Sections }} <!-- Percorre as pastas das disciplinas -->
+    <details class="disciplina-item">
+      <summary><strong>{{ .Title }}</strong></summary>
+      
+      <ul class="topicos-lista">
+        {{ range .Pages }} <!-- Percorre os arquivos .md dentro da pasta -->
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </details>
+  {{ end }}
+</div>
+
+<style>
+  .disciplina-item {
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  summary::-webkit-details-marker { display: none; }
+  
+  .topicos-lista {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  .topicos-lista li {
+    margin-bottom: 5px;
+  }
+</style>

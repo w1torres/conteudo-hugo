@@ -8,7 +8,7 @@ theme = 'hugo-book'
   BookToC = true
   BookSearch = true
   BookRepo = "https://github.com/w1torres/concurso-builder"
-
+  customCSS = ["css/custom.css"]
 [menu]
   [[menu.before]]
     name = "Disciplinas"

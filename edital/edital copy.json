@@ -2,6 +2,93 @@
   "concurso": "Concurso Nacional Unificado - TI",
   "disciplinas": [
   {
+    "id": "portugues",
+    "area": "Língua Portuguesa",
+    "category": "basico",
+    "topics": [
+      { "id": "p-1", "topic": "1. Compreensão e interpretação de textos", "details": "Gêneros variados." },
+      { "id": "p-2", "topic": "2. Reconhecimento de tipos e gêneros textuais", "details": "Análise da estrutura e finalidade dos textos." },
+      { "id": "p-3", "topic": "3. Domínio da ortografia oficial", "details": "Regras de acentuação e grafia." },
+      { "id": "p-4", "topic": "4. Domínio dos mecanismos de coesão textual", "details": "Referenciação, substituição, repetição, conectores." },
+      { "id": "p-5", "topic": "5. Domínio da estrutura morfossintática", "details": "Classes de palavras, coordenação, subordinação, pontuação, concordância, regência, crase." },
+      { "id": "p-6", "topic": "6. Reescrita de frases e parágrafos", "details": "Significação, substituição de palavras, reorganização da estrutura." }
+    ]
+  },
+  {
+    "id": "ingles",
+    "area": "Língua Inglesa",
+    "category": "basico",
+    "topics": [
+      { "id": "i-1", "topic": "1. Compreensão de textos variados", "details": "Domínio do vocabulário, ideias principais e secundárias." },
+      { "id": "i-2", "topic": "2. Itens gramaticais relevantes", "details": "Estruturas importantes para a compreensão de conteúdos semânticos." },
+      { "id": "i-3", "topic": "3. Conhecimento e uso das formas contemporâneas", "details": "Uso prático da linguagem inglesa atual." }
+    ]
+  },
+  {
+    "id": "raciocinio",
+    "area": "Raciocínio Analítico",
+    "category": "basico",
+    "topics": [
+      { "id": "r-1", "topic": "1. Raciocínio analítico e a argumentação", "details": "Uso do senso crítico na argumentação." },
+      { "id": "r-2", "topic": "2. Tipos de Argumentos", "details": "Identificação de argumentos falaciosos e apelativos." },
+      { "id": "r-3", "topic": "3. Comunicação eficiente de argumentos", "details": "Estruturação clara e lógica do discurso." }
+    ]
+  },
+  {
+    "id": "controle_externo_basico",
+    "area": "Controle Externo",
+    "category": "basico",
+    "topics": [
+      { "id": "ceb-1", "topic": "1. Conceito, tipos e formas de controle", "details": "Noções gerais sobre controle na administração pública." },
+      { "id": "ceb-2", "topic": "2. Controle interno e externo", "details": "Diferenças e complementaridades." },
+      { "id": "ceb-3", "topic": "3. Controle parlamentar", "details": "Fiscalização pelo Poder Legislativo." },
+      { "id": "ceb-4", "topic": "4. Controle pelos tribunais de contas", "details": "Atribuições constitucionais das cortes de contas." },
+      { "id": "ceb-5", "topic": "5. Lei nº 8.429/1992", "details": "Lei de Improbidade Administrativa." }
+    ]
+  },
+  {
+    "id": "adm_publica",
+    "area": "Administração Pública",
+    "category": "basico",
+    "topics": [
+      { "id": "ap-1", "topic": "1. Abordagens da administração", "details": "Clássica, burocrática, sistêmica e evolução no Brasil." },
+      { "id": "ap-2", "topic": "2. Processo administrativo", "details": "Funções, estrutura e cultura organizacional." },
+      { "id": "ap-3", "topic": "3. Gestão de pessoas", "details": "Equilíbrio, objetivos, comportamento organizacional." },
+      { "id": "ap-4", "topic": "4. Noções de gestão de processos", "details": "Mapeamento, análise e melhoria." },
+      { "id": "ap-5", "topic": "5. Gestão de projetos", "details": "Elaboração, análise, modelos e metodologia ágil." },
+      { "id": "ap-6", "topic": "6. Administração de recursos materiais e ESG", "details": "Gestão de suprimentos e sustentabilidade." }
+    ]
+  },
+  {
+    "id": "constitucional",
+    "area": "Direito Constitucional",
+    "category": "basico",
+    "topics": [
+      { "id": "dc-1", "topic": "1. Constituição e Poder Constituinte", "details": "Conceito, classificações, supremacia e interpretação." },
+      { "id": "dc-2", "topic": "2. Direitos e garantias fundamentais", "details": "Individuais, coletivos, sociais, políticos e remédios constitucionais." },
+      { "id": "dc-3", "topic": "3. Organização do Estado", "details": "Organização político-administrativa, União, Estados, Municípios, DF." },
+      { "id": "dc-4", "topic": "4. Administração Pública na CF", "details": "Disposições gerais e servidores públicos." },
+      { "id": "dc-5", "topic": "5. Organização dos Poderes", "details": "Legislativo, Executivo e Judiciário; freios e contrapesos." },
+      { "id": "dc-6", "topic": "6. Controle de constitucionalidade", "details": "Sistemas, controle incidental e abstrato." },
+      { "id": "dc-7", "topic": "7. Defesa do Estado e das instituições", "details": "Estado de defesa, estado de sítio." }
+    ]
+  },
+  {
+    "id": "administrativo",
+    "area": "Direito Administrativo",
+    "category": "basico",
+    "topics": [
+      { "id": "da-1", "topic": "1. Estado, governo e administração pública", "details": "1.1 Conceitos. 1.2 Elementos." },
+      { "id": "da-2", "topic": "2. Direito administrativo", "details": "2.1 Conceito. 2.2 Objeto. 2.3 Fontes." },
+      { "id": "da-3", "topic": "3. Ato administrativo", "details": "3.1 Conceito, requisitos, atributos, classificação e espécies. 3.2 Extinção do ato administrativo. 3.3 Decadência administrativa." },
+      { "id": "da-4", "topic": "4. Agentes públicos", "details": "4.1 Legislação pertinente (Lei nº 8.112/1990). 4.2 Disposições doutrinárias." },
+      { "id": "da-5", "topic": "5. Poderes da administração pública", "details": "5.1 Hierárquico, disciplinar, regulamentar e de polícia. 5.2 Uso e abuso do poder." },
+      { "id": "da-8", "topic": "8. Serviços públicos", "details": "8.1 Conceito e elementos constitutivos. 8.3 Delegação: concessão, permissão e autorização." },
+      { "id": "da-9", "topic": "9. Organização administrativa", "details": "9.2 Administração direta e indireta." },
+      { "id": "da-12", "topic": "12. Licitações e contratos administrativos", "details": "12.2 Lei nº 14.133/2021." }
+    ]
+  },
+  {
     "id": "auditoria",
     "area": "Auditoria Governamental",
     "category": "basico",
