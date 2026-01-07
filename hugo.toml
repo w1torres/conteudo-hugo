@@ -63,7 +63,3 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
   canonifyURLs = false
   relativeURLs = false
-
-[permalinks]
-  # Garante que as seções sigam um padrão limpo
-  docs = '/:section/:title/'
