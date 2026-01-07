@@ -3,6 +3,15 @@ languageCode = 'pt-br'
 title = 'Estudo para Concursos'
 theme = 'hugo-book'
 
+# Garante que os links funcionem em qualquer lugar
+relativeURLs = false
+canonifyURLs = true
+
+[params]
+  BookSection = "/"
+  BookToC = true
+  BookSearch = true
+
 # Garante que o Hugo não converta caminhos para minúsculas (importante para IDs de disciplinas)
 disablePathToLower = false
 
