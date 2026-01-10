@@ -34,7 +34,7 @@ jobs:
           extended: true
 
       - name: Build with Hugo
-        run: hugo --minify --cleanDestinationDir --baseURL "https://w1torres.github.io/concurso-hugo/"
+        run: hugo --minify --cleanDestinationDir --baseURL "https://w1torres.github.io/conteudo-hugo/"
 
       - name: Debug Public Folder
         run: ls -R public/ 
