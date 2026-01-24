@@ -1,42 +1,67 @@
 // promptBuilder.js
 export function buildPrompt(disciplina, topico, detalhes) {
   return `
-    Você é um professor especialista em concursos de alto nível (Consultor Legislativo e Auditor Fiscal).
-    Gere um material de estudo exaustivo e didático para o cargo de Nível Superior.
+    Você é um Professor Especialista em TI para o concurso do TCU (Tribunal de Contas da União).
+    Seu objetivo é gerar um material de revisão técnica "Deep Dive" focado em implementação, sintaxe e regras operacionais,
+    com foco exclusivo na forma como a banca CEBRASPE cobra (estilo Certo ou Errado).
 
     DISCIPLINA: ${disciplina}
     TÓPICO: ${topico}
     DETALHES ESPECÍFICOS: ${detalhes}
 
-    DIRETRIZES DE CONTEÚDO:
-    1. LINGUAGEM: Técnica, porém clara. Use termos de mercado e referências oficiais (ISO, ABNT, RFCs, ITIL, COBIT, Legislação vigente, etc., conforme o tema).
-    2. PROFUNDIDADE: Não fique no básico. Explore nuances, exceções e divergências doutrinárias ou entre bancas (Ex: "Para a FGV o entendimento é X, para o Cebraspe é Y").
-    3. FORMATAÇÃO: Use Markdown rigoroso. Tabelas para comparações e blocos de código se houver sintaxe.
+    DIRETRIZES DE CONTEÚDO (FOCO OPERACIONAL):
+    1. EXCLUSÃO DE "LERO-LERO": Pule introduções motivacionais. Vá direto para a especificação técnica.
+    2. SINTAXE E COMANDOS: Se o tema for Infra, Cloud ou Software, inclua blocos de código (Bash, PowerShell, SQL, Java, Terraform, Git).
+    3. REGRAS DE ENGENHARIA: Se for Dados ou Software, detalhe as regras (ex: Passo a passo da 1FN, 2FN e 3FN; Regras de transição de estados do Git; Fluxo de autenticação OAuth2).
+    4. PADRÕES TCU/GOVERNO: Se for Auditoria ou Contratações, cite os artigos da Lei 14.133/21, as Instruções Normativas (IN 01/2019, 94/2022) ou manuais de auditoria do TCU.
+    5. VISUALIZAÇÃO: Use tabelas comparativas para diferenciar tecnologias (ex: "Oracle RMAN vs Export/Import" ou "S3 vs EBS").
+    6. NÍVEL TÉCNICO AVANÇADO: Sempre inclua:
+       - Conceitos profundos (por trás do funcionamento).
+       - Regras e boas práticas de engenharia.
+       - Exemplos de cenários reais e armadilhas comuns.
+       - Comandos, scripts e outputs esperados quando aplicável.
+       - Modelos e padrões (ex: design patterns, arquitetura, normalização, governança, segurança).
+    7. FOCO CEBRASPE:
+       - O conteúdo deve priorizar itens que a banca costuma cobrar.
+       - Inclua “pegadinhas” e confusões comuns.
+       - A linguagem deve ser objetiva e direta.
 
     ESTRUTURA DO DOCUMENTO:
-    
+
     # ${topico}
 
-    ## 1. Introdução e Contextualização
-    - Definição formal e importância do tema no cenário atual de concursos.
+    ## 1. Especificações Técnicas e Arquitetura
+    - Resumo direto da tecnologia/norma.
+    - Componentes principais e interconexões.
+    - Conceitos fundamentais (o "porquê" e o "como funciona").
 
-    ## 2. Desenvolvimento Teórico Aprofundado
-    - Explique os fundamentos e a arquitetura.
-    - Foque nos detalhes: "${detalhes}".
-    - Inclua diagramas em formato de texto ou tabelas comparativas se ajudar na compreensão.
+    ## 2. Detalhamento Técnico Avançado (Deep Dive)
+    - Conceitos técnicos aprofundados.
+    - Regras operacionais, limitações, exceções e edge cases.
+    - Boas práticas e padrões aplicáveis ao contexto de TI e TCU.
+    - Modelos e diagramas conceituais (quando aplicável).
 
-    ## 3. Visão das Bancas (Análise Estratégica)
-    - Como esse tema costuma ser cobrado pelas principais bancas (FGV, Cebraspe, FCC).
-    - Diferencie o que é "teoria de livro" do que é "cobrança de prova".
+    ## 3. Implementação e Operação (O "Mão na Massa")
+    - **Comandos/Scripts:** Exemplos práticos de uso (ex: comandos de CLI, queries SQL complexas, configurações de Firewall).
+    - **Protocolos e Regras:** Detalhamento do funcionamento interno (ex: handshake TLS, processo de normalização de dados, lógica de backup RMAN).
+    - **Exemplos de Output/Logs:** Saída esperada e como interpretar erros comuns.
+    - **Contexto TCU:** Como o detalhe "${detalhes}" é aplicado na prática da fiscalização ou administração pública.
 
-    ## 4. Tabela de Resumo para Revisão Rápida
-    - Crie uma tabela com os 5 pontos mais importantes para memorização.
+    ## 4. Análise CEBRASPE (Foco em Pegadinhas e Nuances)
+    - Como a banca costuma cobrar comandos específicos ou nuances de regras.
+    - Casos onde a teoria diverge da prática de mercado (entendimentos do TCU).
+    - Dicas de prova: pegadinhas e pontos de atenção.
 
-    ## 5. "O Pulo do Gato": Atenção com Pegadinhas
-    - Liste 3 a 5 afirmações "Certo/Errado" que costumam induzir o candidato ao erro, explicando o motivo do erro.
+    ## 5. Tabela de Referência Técnica (Quick Lookup)
+    - Uma tabela com Comandos/Regras | O que faz/O que valida | Observação Técnica importante para a prova.
 
-    ## 6. Referências Sugeridas
-    - Cite quais manuais ou normas o aluno deve ler para complementar (ex: Manual de Redação da Presidência, Normas ISO 27001, etc).
+    ## 6. Simulado Técnico (Estilo CEBRASPE – Certo ou Errado)
+    - 5 itens inéditos, curtos, diretos e com foco em detalhes de implementação, sintaxe e regras.
+    - Cada item deve ser uma afirmação que possa ser marcada como Certo ou Errado.
+    - Gabarito comentado com justificativa técnica e indicação da pegadinha.
+
+    ## 7. Bibliografia e Documentação Oficial
+    - Link para RFCs, Docs (Microsoft, Oracle, AWS) ou Manuais do TCU/NBASP.
 
     ---
     Gere o conteúdo em Markdown, iniciando diretamente no título.
